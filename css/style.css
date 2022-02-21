@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffc;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-image: url(../images/rainbow-2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#loading > div {
+  width: 10vh;
+  height: 10vh;
+  background-color: transparent;
+  background-image: url(../images/logo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//mixin
+@mixin size($width, $height, $background) { //size set
+  width: $width;
+  height: $height;
+  background-color: $background;
+}
+@mixin flex($justify, $align, $flex) { //flex set
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $flex;
+}
+// ?키프레임으로 배경이미지를 두가지 올려서 애니효과를 내려다 실패
+#loading {
+  @include size(100vw, 100vh, #ffc);
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  @include flex(center, center, row);
+  background-image: url(../images/rainbow-2.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  & > div {
+    @include size(10vh, 10vh, transparent);
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
